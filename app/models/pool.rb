@@ -10,6 +10,10 @@ class Pool < ActiveRecord::Base
     puts "-" * 20
     members.each { |member| member.print_status }
     puts "-" * 20
-    puts 
+    puts
+  end
+
+  def generate_balance_records!
+    members.each { |member| member.generate_balance_record! }
   end
 end
