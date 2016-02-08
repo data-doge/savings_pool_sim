@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160208073407) do
+ActiveRecord::Schema.define(version: 20160208074439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "balance_record", force: :cascade do |t|
+  create_table "balance_records", force: :cascade do |t|
     t.integer  "pool_id"
     t.integer  "member_id"
     t.float    "amount"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20160208073407) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "balance_record", ["member_id"], name: "index_balance_record_on_member_id", using: :btree
-  add_index "balance_record", ["pool_id"], name: "index_balance_record_on_pool_id", using: :btree
+  add_index "balance_records", ["member_id"], name: "index_balance_records_on_member_id", using: :btree
+  add_index "balance_records", ["pool_id"], name: "index_balance_records_on_pool_id", using: :btree
 
   create_table "deposits", force: :cascade do |t|
     t.integer  "pool_id"
