@@ -1,4 +1,6 @@
 Pool.destroy_all
 
+number_of_members = 3
+
 pool = Pool.create(name: "Savings Pool")
-3.times { pool.members.create(name: Faker::Name.name) }
+number_of_members.times { pool.members.create(name: Faker::Name.name) }
