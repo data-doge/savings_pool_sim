@@ -9,5 +9,7 @@ class Pool < ActiveRecord::Base
     puts "#{name}: $#{balance}"
     puts "-" * 20
     members.each { |member| member.print_status }
+    puts "-" * 20
+    puts 
   end
 end

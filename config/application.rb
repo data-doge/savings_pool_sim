@@ -13,6 +13,6 @@ Bundler.require(*Rails.groups)
 module SavingsPoolSim
   class Application < Rails::Application
     config.active_record.raise_in_transactional_callbacks = true
-    config.eager_load_paths += %W( #{config.root}/services )
+    config.eager_load_paths += %W( #{config.root}/services)
   end
 end
