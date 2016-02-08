@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Pool.destroy_all
+
+# create a pool with five members
+pool = Pool.create(name: "Savings Pool")
+5.times { pool.members.create(name: Faker::Name.name) }
+
+# create initial deposits for the pool
+pool.members.each do |member|
+  amount = rand(1..10) * 100
+  Deposit.create(pool: pool, member: member, amount: amount)
+end
