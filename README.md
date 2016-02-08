@@ -1,5 +1,12 @@
 ## savings pool sim
 
+- everyone assigned a role
+- everyone contributes their suggested amount
+- one month passes
+- everyone draws an event card
+- if loans are needed, discussions happen
+- repeat ..
+
 ---
 
 ## group 1:
