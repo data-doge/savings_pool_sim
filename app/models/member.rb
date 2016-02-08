@@ -13,7 +13,7 @@ class Member < ActiveRecord::Base
   end
 
   def generate_balance_record!
-    balance_records.create(amount: points + balance, pool: pool)
+    balance_records.create(amount: balance, pool: pool)
   end
 
   def deposit(amount)
@@ -25,13 +25,13 @@ class Member < ActiveRecord::Base
   end
 
   def print_transaction_history
+    puts
     puts "transaction history"
     puts "-" * 20
     ordered_transactions.each do |t|
       action = t.class == Deposit ? "deposited" : "withdrew"
       puts "#{action} $#{t.amount}"
     end
-    puts "-" * 20; nil
   end
 
   def prompt_action
