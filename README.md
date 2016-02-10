@@ -1,5 +1,9 @@
 ## savings pool sim
 
+**work in progress**
+
+**this is a web adaptation of a game developed by Phil Stevens at [Living Economies](http://www.le.org.nz/)**
+
 - everyone assigned a role
 - everyone contributes their suggested amount
 - one month passes
